@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/da4tovigovorite/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/da4tovigovorite/frontend-project-44#readme"
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "homepage": "https://github.com/da4tovigovorite/frontend-project-44#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }
