@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import questionAndAnswer from '../src/questionAndAnswer.js';
-questionAndAnswer();
+import gameEven from '../src/games/even.js';
+
+gameEven();
