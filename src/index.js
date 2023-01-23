@@ -11,7 +11,7 @@ export const gameLogic = (conditions, arrInput) => {
     console.log(`Question: ${gameQuestion}`);
     const userAnswer = readlineSync.question(`Your answer: `);
 
-    if (userAnswer === gameCorrectAnswer) {
+    if (userAnswer == gameCorrectAnswer) {
       console.log(`Correct!`);
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameCorrectAnswer}'.`);
