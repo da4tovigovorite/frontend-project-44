@@ -3,4 +3,4 @@
 <a href="https://codeclimate.com/github/da4tovigovorite/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/e8a1f044ed56d975e2b4/maintainability" /></a>
 <a href="https://asciinema.org/a/ffhYZtMpeulIy7pAt6E6dwfSP" target="_blank"><img src="https://asciinema.org/a/ffhYZtMpeulIy7pAt6E6dwfSP.svg" /></a>
 <a href="https://asciinema.org/a/9n4csGHmhTP2MIOgslS8kdNqR" target="_blank"><img src="https://asciinema.org/a/9n4csGHmhTP2MIOgslS8kdNqR.svg" /></a>
-<a href="https://asciinema.org/a/okTANLZt6el8s9TneR5DS3pyu" target="_blank"><img src="https://asciinema.org/a/okTANLZt6el8s9TneR5DS3pyu.svg" /></a>
+<a href="https://asciinema.org/a/553797" target="_blank"><img src="https://asciinema.org/a/553797.svg" /></a>
