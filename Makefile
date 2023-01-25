@@ -1,6 +1,9 @@
 install:
 	npm ci
 
+brain-prime:
+	node bin/prime.js
+
 brain-progression:
 	node bin/progression.js
 
