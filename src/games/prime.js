@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { gameLogic } from '../index.js';
 
-const rules = `Answer "yes" if the number is even, otherwise answer "no".`;
+const rules = `Answer "yes" if the number is prime, otherwise answer "no".`;
 
 const isPrime = (num) => {
   if (num <= 1) return `no`;
