@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { gameLogic } from '../index.js';
 
-const rules = `What is the result of the expression?`;
+const rules = 'What is the result of the expression?';
 
 const arrQuestionAndCorrectAnswer = () => {
   const randomFirstNumber = _.random(1, 10);
@@ -15,9 +15,9 @@ const arrQuestionAndCorrectAnswer = () => {
 
   let gameResult = 0;
   // which of the operations ( + , - , * ) will be performed
-  if (arithmeticOperation === `+`) {
+  if (arithmeticOperation === '+') {
     gameResult = randomFirstNumber + randomSecondNumber;
-  } else if (arithmeticOperation === `-`) {
+  } else if (arithmeticOperation === '-') {
     gameResult = randomFirstNumber - randomSecondNumber;
   } else gameResult = randomFirstNumber * randomSecondNumber;
 

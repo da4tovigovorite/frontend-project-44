@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { gameLogic } from '../index.js';
 
-const rules = `What number is missing in the progression?`;
+const rules = 'What number is missing in the progression?';
 
 const arrQuestionAndCorrectAnswer = () => {
   const randomProgressionLength = _.random(5, 10);
@@ -14,9 +14,9 @@ const arrQuestionAndCorrectAnswer = () => {
     arr[i] = randomProgressionFirstElement + i * randomProgressionDifference;
   }
   const correctAnswerOutput = arr[randomHiddenElement]; // output
-  arr[randomHiddenElement] = `..`;
+  arr[randomHiddenElement] = '..';
 
-  const gameQuestion = arr.join(` `); // output
+  const gameQuestion = arr.join(' '); // output
 
   return [gameQuestion, correctAnswerOutput];
 };

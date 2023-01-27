@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import { gameLogic } from '../index.js';
 
-const rules = `Find the greatest common divisor of given numbers.`;
+const rules = 'Find the greatest common divisor of given numbers.';
 
 const resultEuclidsAlgorithm = (num1, num2) => {
   let x = num1;

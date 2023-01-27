@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import { gameLogic } from '../index.js';
 
-const rules = `Answer "yes" if the number is even, otherwise answer "no".`;
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (num) => (num % 2 === 0 ? `yes` : `no`); // isEven is a string
+const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no'); // isEven is a string
 
 const arrQuestionAndCorrectAnswer = () => {
   const randomNumber = _.random(1, 10);
