@@ -19,7 +19,7 @@ const arrQuestionAndCorrectAnswer = () => {
   const randomFirstNumber = _.random(1, 10);
   const randomSecondNumber = _.random(1, 10);
 
-  const gameQuestion = ` ${randomFirstNumber} ${randomSecondNumber}`;
+  const gameQuestion = `${randomFirstNumber} ${randomSecondNumber}`;
   const gameResult = resultEuclidsAlgorithm(randomFirstNumber, randomSecondNumber);
 
   return [gameQuestion, gameResult];
