@@ -16,10 +16,15 @@ const arrQuestionAndCorrectAnswer = () => {
   let gameResult = 0;
   // which of the operations ( + , - , * ) will be performed
   if (arithmeticOperation === '+') {
-    gameResult = randomFirstNumber + randomSecondNumber;
+    const isPlus = randomFirstNumber + randomSecondNumber;
+    gameResult = isPlus.toString();
   } else if (arithmeticOperation === '-') {
-    gameResult = randomFirstNumber - randomSecondNumber;
-  } else gameResult = randomFirstNumber * randomSecondNumber;
+    const isMinus = randomFirstNumber - randomSecondNumber;
+    gameResult = isMinus.toString();
+  } else {
+    const isMulti = randomFirstNumber * randomSecondNumber;
+    gameResult = isMulti.toString();
+  }
 
   const gameQuestion = `${randomFirstNumber} ${arithmeticOperation} ${randomSecondNumber}`;
 
