@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import { questionAndAnswer } from '../src/questionAndAnswer.js';
+import { userName } from '../src/scr.js';
 
-questionAndAnswer();
+console.log('Welcome to the Brain Games!');
+userName();
