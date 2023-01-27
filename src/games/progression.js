@@ -13,7 +13,7 @@ const arrQuestionAndCorrectAnswer = () => {
   for (let i = 0; i < randomProgressionLength; i += 1) {
     arr[i] = randomProgressionFirstElement + i * randomProgressionDifference;
   }
-  const correctAnswerOutput = arr[randomHiddenElement]; // output
+  const correctAnswerOutput = arr[randomHiddenElement].toString(); // output, String
   arr[randomHiddenElement] = '..';
 
   const gameQuestion = arr.join(' '); // output
