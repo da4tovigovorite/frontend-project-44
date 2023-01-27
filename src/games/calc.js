@@ -4,7 +4,7 @@ import { gameLogic } from '../index.js';
 const rules = 'What is the result of the expression?';
 
 const arrQuestionAndCorrectAnswer = () => {
-  const randomFirstNumber = _.random(1, 10);
+  const randomFirstNumber = _.random(11, 20);
   const randomSecondNumber = _.random(1, 10);
 
   const mathematicalOperations = [42, 43, 45]; // Ascii: 42 is "*" ; 43 is "+" ; 45  is "-"
