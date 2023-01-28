@@ -14,12 +14,11 @@ const isPrime = (num) => {
 };
 */
 const isPrime = (num) => {
-  if (num <= 1) return 'no';
+  if (num < 2) return 'no';
   if (num === 2) return 'yes';
   if (num % 2 === 0) return 'no';
 
-  const s = Math.sqrt(num);
-  for (let i = 3; i <= s; i += 2) {
+  for (let i = 3; i <= Math.sqrt(num); i += 2) {
     if (num % i === 0) return 'no';
   }
   return 'yes';
