@@ -34,7 +34,7 @@ brain-gcd
 ```
 <a href="https://asciinema.org/a/553797" target="_blank"><img src="https://asciinema.org/a/553797.svg" /></a>
 
-### 4. Пuess what number is missing. 
+### 4. Guess what number is missing. 
 ```shell
 brain-prograssion
 ```
