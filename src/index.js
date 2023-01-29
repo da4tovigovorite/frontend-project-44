@@ -6,7 +6,8 @@ const runGameLogic = (conditions, arrInput) => {
 
   console.log(conditions);
 
-  for (let i = 0; i < 3; i += 1) {
+  const rounds = 3;
+  for (let i = 0; i < rounds; i += 1) {
     const [gameQuestion, gameCorrectAnswer] = arrInput();
     console.log(`Question: ${gameQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
