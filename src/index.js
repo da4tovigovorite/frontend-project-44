@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 
-export const gameLogic = (conditions, arrInput) => {
+const runGameLogic = (conditions, arrInput) => {
   const userName = readlineSync.question('Welcome to the Brain Games!\nMay I have your name?');
   console.log(`Hello, ${userName}!`);
 
   console.log(conditions);
 
   for (let i = 0; i < 3; i += 1) {
-    const [gameQuestion, gameCorrectAnswer] = arrInput[i];
+    const [gameQuestion, gameCorrectAnswer] = arrInput();
     console.log(`Question: ${gameQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
@@ -20,4 +20,4 @@ export const gameLogic = (conditions, arrInput) => {
   }
   return console.log(`Congratulations, ${userName}!`);
 };
-export default gameLogic;
+export default runGameLogic;
