@@ -1,30 +1,27 @@
 import _ from 'lodash';
-import { gameLogic } from '../index.js';
+import runGameLogic from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  if (num <= 1) return 'no';
-  if (num === 2) return 'yes';
+  if (num <= 1) return false;
+  if (num === 2) return true;
 
   const s = Math.sqrt(num);
 
   for (let i = 2; i <= s; i += 1) {
-    if (num % i === 0) return 'no';
+    if (num % i === 0) return false;
   }
-  return 'yes';
+  return true;
 };
 
-const arrQuestionAndCorrectAnswer = () => {
+const getData = () => {
   const randomNumber = _.random(1, 100);
-  return [randomNumber, isPrime(randomNumber)];
+  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
+  return [randomNumber, correctAnswer];
 };
 
-const gamePrime = () => {
-  const arrOutput = [];
-  for (let i = 0; i < 3; i += 1) {
-    arrOutput.push(arrQuestionAndCorrectAnswer());
-  }
-  gameLogic(rules, arrOutput);
+const startGamePrime = () => {
+  runGameLogic(rules, getData);
 };
-export default gamePrime;
+export default startGamePrime;

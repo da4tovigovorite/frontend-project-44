@@ -1,41 +1,41 @@
 import _ from 'lodash';
-import { gameLogic } from '../index.js';
+import runGameLogic from '../index.js';
 
 const rules = 'What is the result of the expression?';
 
-const arrQuestionAndCorrectAnswer = () => {
+const getCalculate = (num1, num2, op) => {
+  let result = 0;
+  switch (op) {
+    case '*':
+      result = num1 * num2;
+      break;
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    default:
+      console.log('Error! Something gone wrong =(');
+  }
+  return result;
+};
+
+const getData = () => {
   const randomFirstNumber = _.random(11, 20);
   const randomSecondNumber = _.random(1, 10);
 
-  const mathematicalOperations = [42, 43, 45]; // Ascii: 42 is "*" ; 43 is "+" ; 45  is "-"
-  // random between [42,43,45]
-  const randomMathOp = mathematicalOperations[
-    Math.floor(Math.random() * mathematicalOperations.length)];
-  const arithmeticOperation = String.fromCharCode(randomMathOp); // convert Ascii symbol to a char
-
-  let gameResult = 0;
-  // which of the operations ( + , - , * ) will be performed
-  if (arithmeticOperation === '+') {
-    const isPlus = randomFirstNumber + randomSecondNumber;
-    gameResult = isPlus.toString();
-  } else if (arithmeticOperation === '-') {
-    const isMinus = randomFirstNumber - randomSecondNumber;
-    gameResult = isMinus.toString();
-  } else {
-    const isMulti = randomFirstNumber * randomSecondNumber;
-    gameResult = isMulti.toString();
-  }
+  const mathematicalOperations = ['*', '+', '-'];
+  const randomArrNum = _.random(0, mathematicalOperations.length - 1);
+  const arithmeticOperation = mathematicalOperations[randomArrNum];
 
   const gameQuestion = `${randomFirstNumber} ${arithmeticOperation} ${randomSecondNumber}`;
+  const gameResult = getCalculate(randomFirstNumber, randomSecondNumber, arithmeticOperation);
 
-  return [gameQuestion, gameResult];
+  return [gameQuestion, gameResult.toString()];
 };
 
-const gameCalc = () => {
-  const arrOutput = [];
-  for (let i = 0; i < 3; i += 1) {
-    arrOutput.push(arrQuestionAndCorrectAnswer());
-  }
-  gameLogic(rules, arrOutput);
+const startGameCalc = () => {
+  runGameLogic(rules, getData);
 };
-export default gameCalc;
+export default startGameCalc;
